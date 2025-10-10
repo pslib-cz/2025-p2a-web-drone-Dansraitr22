@@ -4,41 +4,90 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
-@layer design{
-:root{
-    color-scheme: light dark;
-    --header-bg-color:light-dark(#3B3E40,#3B3E40);
-    --primary-color:light-dark(#66D4D4,#478f8f);
-    --secondary-color:#fff;
-    --text-color:ligt-dark(#000,#fff);
-    --header-text-color:light-dark(#fff,#fff);
---bg-color:light-darl (#fff,#000);
-}
-body{
-    background-color: var(--bg-color);
-}
-html{
-    font-family:'Open Sans', sans-serif;
-    font-size: 100%;
-    color: var(--text-color);
+
+@layer init {
+    :root {
+        color-scheme: light dark;
+        --header-bg-color: light-dark(#3B3E40, #3B3E40);
+        --primary-color: light-dark(#66D4D4, #478f8f);
+        --secondary-color:light-dark(#fff,#fff);
+        --text-color: light-dark(#000, #fff);
+        --header-text-color: light-dark(#fff, #fff);
+        --bg-color: light-dark(#fff, #000);
+    }
+
+    body {
+        background-color: var(--bg-color);
+    }
+
+    html {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%;
+        color: var(--text-color);
+
+    }
 
 }
 
-.header{
-    background-image: url(../images/images/header-2560w.webp);
-    background-size: cover;
-    background-position: top left;
-    background-color: var(--header-bg-color) ; 
-    color: var(--header-text-color);
-    line-height: 1.5;
-}
-.header__nav{
-    text-align: center;
+@layer design {
+    h1 {
+        font-size: 4rem;
+        font-weight: 800;
+    }
 
-}
-.header__link{
-    display: inline-block;
+    .header {
+        background-image: url(../images/images/header-2560w.webp);
+        background-size: cover;
+        background-position: top left;
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
+        line-height: 1.5;
+        padding: 1rem;
+    }
 
-    padding-top: 1em;
-}
+    .header__nav {
+        text-align: center;
+
+    }
+
+    .header__link {
+
+    }
+    .header__intro {
+        margin-top: 10vh;
+    }
+    .button{
+        display: inline-block;
+        border-radius: 0.5rem;
+        padding: 0.75em 2em;
+    }
+    .button--light{
+        background-color: var(--bg-color);
+        color:var(--text-color);
+    }
+    main{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .img--fluid{
+        display:block;
+        width: 100%;
+        height: auto;
+    }
+    .img--block{
+        margin: 0;
+    }
+    .img-block_figcaption{
+text-align: center;
+margin-top: 0.5em;
+    }
+    .info-block{
+        margin-top: 5rem;
+        padding: 1rem;
+
+    }
+    .info-block__header{
+        font-weight: 900;
+
+    }
 }
