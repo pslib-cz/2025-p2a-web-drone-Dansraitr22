@@ -8,12 +8,13 @@
 @layer init {
     :root {
         color-scheme: light dark;
-        --header-bg-color: light-dark(#3B3E40, #3B3E40);
-        --primary-color: light-dark(#66D4D4, #478f8f);
+        --header-bg-color: light-dark(#3B3E40,#3B3E40);
+        --primary-color: light-dark(#66D4D4,#478f8f);
         --secondary-color:light-dark(#fff,#fff);
-        --text-color: light-dark(#000, #fff);
-        --header-text-color: light-dark(#fff, #fff);
-        --bg-color: light-dark(#fff, #000);
+        --text-color: light-dark(#000,#fff);
+        --text-color-light: #fff;
+        --header-text-color: light-dark(#fff,#fff);
+        --bg-color: light-dark(#fff,#000);
     }
 
     body {
@@ -60,6 +61,7 @@
         display: inline-block;
         border-radius: 0.5rem;
         padding: 0.75em 2em;
+        text-decoration: none;
     }
     .button--light{
         background-color: var(--bg-color);
@@ -82,12 +84,41 @@ text-align: center;
 margin-top: 0.5em;
     }
     .info-block{
-        margin-top: 5rem;
+        margin-top: 2.5rem;
         padding: 1rem;
 
+
+    }
+    .info-block--bordered{
+        border-color: var(--primary-color);
+        border-style: solid;
     }
     .info-block__header{
         font-weight: 900;
 
     }
+    li{
+        margin-bottom: 1rem;
+      
+    }
+    li::marker{
+        color: var(--primary-color);
+    }
+.button--primary{
+background-color: var(--primary-color);
+color: var(--text-color-light);
+}
+.figcaption_text{
+    margin-top: 2rem;
+}
+.figcaption_header{
+font-weight: 900;
+margin-bottom: 1rem;
+}
+.figure--inlineblock{
+    display: inline-block;
+    width: 17.5rem;
+    vertical-align: top;
+    
+}
 }
