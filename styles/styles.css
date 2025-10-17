@@ -12,7 +12,7 @@
         --primary-color: light-dark(#66D4D4,#478f8f);
         --secondary-color:light-dark(#fff,#fff);
         --text-color: light-dark(#000,#fff);
-        --text-color-light: #fff;
+        --text-color-primary: light-dark(#fff,#fff);
         --header-text-color: light-dark(#fff,#fff);
         --bg-color: light-dark(#fff,#000);
     }
@@ -97,28 +97,48 @@ margin-top: 0.5em;
         font-weight: 900;
 
     }
-    li{
+    .list__item{
         margin-bottom: 1rem;
       
     }
-    li::marker{
+    .list__item::marker{
         color: var(--primary-color);
     }
 .button--primary{
 background-color: var(--primary-color);
-color: var(--text-color-light);
+color: var(--text-color-primary);
 }
-.figcaption_text{
+.figcaption__text{
     margin-top: 2rem;
 }
-.figcaption_header{
+.figcaption__tittle{
 font-weight: 900;
 margin-bottom: 1rem;
 }
 .figure--inlineblock{
     display: inline-block;
-    width: 17.5rem;
+    max-width: 20rem;
     vertical-align: top;
+    padding: 1em;
     
+}
+.info-block--add{
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    border: none;
+    text-align: center;
+}
+.info-block--add__heading{
+    font-size: calc(1em + 3vw);
+}
+.heading--bigger2x{
+    font-size: 2em;
+}
+.footer{
+    background-color: var(--header-bg-color);
+    text-align: center;
+    color: var(--text-color-primary);
+    padding:2.5rem;
+    margin-top: 4rem;
 }
 }
