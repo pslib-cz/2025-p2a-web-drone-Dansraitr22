@@ -135,6 +135,7 @@ margin-bottom: 1rem;
     font-size: 2em;
 }
 .footer{
+    display: block;
     background-color: var(--header-bg-color);
     text-align: center;
     color: var(--text-color-primary);
